@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo Estates | Homes in North Cyprus</title>
+<meta name="description" content="Villas and apartments in Girne, İskele, Gazimağusa and Lefkoşa. Ask a local agent on WhatsApp.">
+<meta property="og:title" content="Demo Estates | Homes in North Cyprus">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#top" id="brand"></a>
+  <nav>
+    <a href="#homes" data-i="navHomes"></a>
+    <a href="#contact" data-i="navContact"></a>
+    <button id="lang" type="button" aria-label="Language"></button>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="sun" aria-hidden="true"></div>
+    <svg viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 400V250L110 190 210 245 350 110 460 205 600 80 720 200 860 135 980 230 1100 165 1200 240V400Z" fill="var(--ink)" opacity=".28"/>
+      <path d="M0 400V300L140 250 260 295 420 215 560 290 700 235 880 300 1040 250 1200 300V400Z" fill="var(--ink)" opacity=".85"/>
+    </svg>
+    <div class="hero-in">
+      <h1 data-i="heroTitle"></h1>
+      <p data-i="heroSub"></p>
+    </div>
+    <form class="search" id="search">
+      <label><span data-i="fLoc"></span><select id="fArea"></select></label>
+      <label><span data-i="fBudget"></span><select id="fBudget"></select></label>
+      <label><span data-i="fType"></span><select id="fType"></select></label>
+    </form>
+  </section>
+  <section id="homes">
+    <h2 data-i="homesTitle"></h2>
+    <p id="count" aria-live="polite"></p>
+    <div id="grid"></div>
+  </section>
+  <section id="contact">
+    <div>
+      <h2 data-i="contactTitle"></h2>
+      <p data-i="contactSub"></p>
+    </div>
+    <form id="cform">
+      <label><span data-i="fName"></span><input id="cName" required autocomplete="name"></label>
+      <label><span data-i="fMsg"></span><textarea id="cMsg" rows="4" required></textarea></label>
+      <button class="btn" type="submit" data-i="send"></button>
+    </form>
+  </section>
+</main>
+<footer><span id="foot"></span><span data-i="demo"></span></footer>
+<a class="fab" id="fab" target="_blank" rel="noopener"></a>
+<dialog id="dlg"></dialog>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

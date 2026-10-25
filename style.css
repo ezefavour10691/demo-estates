@@ -1,0 +1,55 @@
+:root{--ink:#0A2540;--sea:#1F6F8B;--stone:#F2F4F3;--accent:#C8326B}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
+body{margin:0;font:400 1rem/1.6 Manrope,system-ui,sans-serif;color:var(--ink);background:var(--stone);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3,.brand,.price{font-family:Fraunces,Georgia,serif;line-height:1.1}
+a,button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.top{position:absolute;inset:0 0 auto;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw}
+.brand{font-size:1.45rem;font-weight:700;text-decoration:none}
+nav{display:flex;gap:1.4rem;align-items:center}
+nav a{text-decoration:none;font-weight:600}
+#lang{border:1.5px solid var(--ink);background:none;border-radius:99px;padding:.25rem .85rem;cursor:pointer;font-weight:600}
+
+.hero{position:relative;min-height:94vh;display:grid;align-content:center;gap:2.2rem;padding:7rem 5vw 5rem;overflow:hidden;background:linear-gradient(#f7d3a1 0%,#f3b3a4 40%,#9cc3d1 68%,var(--sea) 100%)}
+.hero svg{position:absolute;left:0;bottom:0;width:100%;height:55%}
+.sun{position:absolute;right:14%;top:20%;width:clamp(5rem,12vw,9rem);aspect-ratio:1;border-radius:50%;background:#fff8;box-shadow:0 0 0 1.4rem #fff3,0 0 0 3rem #fff2}
+.hero-in{position:relative;max-width:36rem}
+h1{font-size:clamp(2.4rem,6.5vw,4.6rem);margin:0 0 1rem;font-weight:700;letter-spacing:-.02em}
+.hero-in p{font-size:1.15rem;max-width:30rem;margin:0}
+.search{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1rem;max-width:52rem;padding:1.3rem;background:#fff;border-radius:20px;box-shadow:0 24px 60px #0a254044}
+label{display:grid;gap:.3rem;font-weight:600;font-size:.9rem}
+select,input,textarea{width:100%;padding:.7rem .8rem;border:1.5px solid #c7d0d6;border-radius:10px;background:#fff}
+
+section[id]{max-width:76rem;margin:auto;padding:4.5rem 5vw}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 .4rem}
+#count{margin:0 0 1.6rem;color:#46607a}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1.5rem}
+.card{all:unset;display:grid;gap:.25rem;padding-bottom:1.1rem;background:#fff;border-radius:14px;overflow:hidden;cursor:pointer;box-shadow:0 1px 2px #0a25401a;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0a254026}
+.card:focus-visible{outline:3px solid var(--accent)}
+.card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.card>:not(img){margin:0 1.1rem}
+.price{font-size:1.45rem;font-weight:700;color:var(--accent);margin-top:.6rem}
+.card h3{font-size:1.1rem;margin:0}
+.area{color:#46607a;font-size:.95rem}
+.meta{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.9rem;font-weight:600}
+.none{grid-column:1/-1}
+
+#contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:2.5rem;align-items:start}
+#cform{display:grid;gap:1rem;padding:1.5rem;background:#fff;border-radius:18px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.8rem 1.5rem;border:0;border-radius:99px;font-weight:600;text-decoration:none;cursor:pointer;text-align:center}
+.btn:hover{filter:brightness(1.08)}
+footer{display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;padding:2rem 5vw 5rem;background:var(--ink);color:#d7e3ec;font-size:.9rem}
+.fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:9;background:#0f7a43;color:#fff;padding:.75rem 1.2rem;border-radius:99px;font-weight:600;text-decoration:none;box-shadow:0 8px 24px #0a254055}
+
+dialog{border:0;padding:0;width:min(34rem,92vw);border-radius:18px;overflow:hidden;color:var(--ink)}
+dialog::backdrop{background:#0a2540a0}
+dialog img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.dbody{padding:1.3rem 1.5rem 1.6rem;display:grid;gap:.6rem}
+.dbody h3{font-size:1.5rem;margin:0}.dbody p{margin:0}
+.x{position:absolute;top:.7rem;right:.7rem;width:2.4rem;height:2.4rem;border:0;border-radius:50%;background:#fffd;font-size:1.4rem;cursor:pointer}
+
+@media (prefers-reduced-motion:no-preference){.hero-in{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}@keyframes rise{from{opacity:0;transform:translateY(24px)}}}
+@media (max-width:560px){nav a{display:none}.sun{right:8%;top:16%}}
